@@ -1,5 +1,9 @@
-import { Box } from "@chakra-ui/react";
+import { GridItem } from "@chakra-ui/react";
 
 export function Profile() {
-  return <Box>Profile</Box>;
+  return (
+    <GridItem rowSpan={2} colSpan={1}>
+      Profile
+    </GridItem>
+  );
 }
