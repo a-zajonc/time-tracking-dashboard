@@ -1,9 +1,12 @@
 import { ChakraProvider, Box } from "@chakra-ui/react";
+import { TimeTrackingDashboard } from "./components";
 
 function App() {
   return (
     <ChakraProvider>
-      <Box>Hello World</Box>
+      <Box>
+        <TimeTrackingDashboard />
+      </Box>
     </ChakraProvider>
   );
 }
