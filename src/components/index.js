@@ -10,10 +10,10 @@ import { SelfCare } from "./SelfCare";
 export function TimeTrackingDashboard() {
   return (
     <Grid
-      h="300px"
+      h="500px"
       templateRows="repeat(2, 1fr)"
       templateColumns="repeat(4, 1fr)"
-      gap={4}
+      gap={7}
     >
       <Profile />
       <Work />
