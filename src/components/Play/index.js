@@ -1,5 +1,5 @@
-import { Box } from "@chakra-ui/react";
+import { GridItem } from "@chakra-ui/react";
 
 export function Play() {
-  return <Box>Play</Box>;
+  return <GridItem colSpan={1}>Play</GridItem>;
 }

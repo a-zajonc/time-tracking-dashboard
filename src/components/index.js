@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import { Profile } from "./Profile";
 import { Work } from "./Work";
 import { Play } from "./Play";
@@ -9,7 +9,12 @@ import { SelfCare } from "./SelfCare";
 
 export function TimeTrackingDashboard() {
   return (
-    <Box height="100vh" bgColor="#0F1424">
+    <Grid
+      h="300px"
+      templateRows="repeat(2, 1fr)"
+      templateColumns="repeat(4, 1fr)"
+      gap={4}
+    >
       <Profile />
       <Work />
       <Play />
@@ -17,6 +22,6 @@ export function TimeTrackingDashboard() {
       <Exercise />
       <Social />
       <SelfCare />
-    </Box>
+    </Grid>
   );
 }

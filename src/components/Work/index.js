@@ -1,5 +1,5 @@
-import { Box } from "@chakra-ui/react";
+import { GridItem } from "@chakra-ui/react";
 
 export function Work() {
-  return <Box>Work</Box>;
+  return <GridItem colSpan={1}>Work</GridItem>;
 }
