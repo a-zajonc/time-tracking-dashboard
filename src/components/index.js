@@ -9,7 +9,7 @@ import { SelfCare } from "./SelfCare";
 
 export function TimeTrackingDashboard() {
   return (
-    <Box>
+    <Box height="100vh" bgColor="#0F1424">
       <Profile />
       <Work />
       <Play />
