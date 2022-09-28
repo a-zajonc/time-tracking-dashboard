@@ -1,5 +1,6 @@
 import icon from "./icon-work.svg";
 import { ActivityBox } from "../ActivityBox";
+import data from "../data.json";
 
 export function Work() {
   return (
@@ -7,8 +8,8 @@ export function Work() {
       backgroundColor="#FF8C66"
       icon={icon}
       activityName="Work"
-      hoursNumber="32hrs"
-      hoursNumberLastWeek="Last week - 36 hrs"
+      hoursNumber={data[0].timeframes.weekly.current}
+      hoursNumberLastWeek={data[0].timeframes.weekly.previous}
     />
   );
 }

@@ -43,10 +43,10 @@ export function ActivityBox({
           <Img src={ellipsis} alt="Ellipsis" />
         </Box>
         <Text fontSize="50px" color="white" fontWeight="300" pt="10gpx">
-          {hoursNumber}
+          {hoursNumber}hrs
         </Text>
         <Text color="#BDC1FF" fontSize="14px">
-          {hoursNumberLastWeek}
+          Last week - {hoursNumberLastWeek}hrs
         </Text>
       </Box>
     </GridItem>
