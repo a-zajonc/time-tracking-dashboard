@@ -2,14 +2,14 @@ import { ActivityBox } from "../ActivityBox";
 import icon from "./icon-exercise.svg";
 import data from "../data.json";
 
-export function Exercise() {
+export function Exercise({ index, period }) {
   return (
     <ActivityBox
       backgroundColor="#4ACF81"
       icon={icon}
-      activityName="Exercise"
-      hoursNumber={data[3].timeframes.weekly.current}
-      hoursNumberLastWeek={data[3].timeframes.weekly.previous}
+      activityName={data[index].title}
+      period={period}
+      index={index}
     />
   );
 }

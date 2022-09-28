@@ -19,12 +19,12 @@ export function TimeTrackingDashboard() {
       gap={7}
     >
       <Profile setPeriod={setPeriod} period={period} />
-      <Work />
-      <Play />
-      <Study />
-      <Exercise />
-      <Social />
-      <SelfCare />
+      <Work period={period} index="0" />
+      <Play period={period} index="1" />
+      <Study period={period} index="2" />
+      <Exercise period={period} index="3" />
+      <Social period={period} index="4" />
+      <SelfCare period={period} index="5" />
     </Grid>
   );
 }
