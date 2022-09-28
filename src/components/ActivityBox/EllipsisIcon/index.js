@@ -3,6 +3,7 @@ import { Icon } from "@chakra-ui/react";
 export function EllipsisIcon() {
   return (
     <Icon
+      viewBox="-10 -8 40 20"
       width="21"
       height="5"
       color="#BBC0FF"
