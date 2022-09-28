@@ -9,7 +9,7 @@ import { SelfCare } from "./SelfCare";
 import { useState } from "react";
 
 export function TimeTrackingDashboard() {
-  const [period, setPeriod] = useState("monthly");
+  const [period, setPeriod] = useState("weekly");
 
   return (
     <Grid
