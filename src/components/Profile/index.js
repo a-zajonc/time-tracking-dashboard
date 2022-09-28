@@ -1,6 +1,18 @@
 import { GridItem, Box, Heading, Text, Img } from "@chakra-ui/react";
 
-export function Profile() {
+function ChoosePeriod({ setPeriod, period, name }) {
+  return (
+    <Text
+      _hover={{ color: "white" }}
+      onClick={() => setPeriod(name)}
+      color={period === name ? "white" : "#BDC1FF"}
+    >
+      {name.charAt(0).toUpperCase() + name.slice(1)}
+    </Text>
+  );
+}
+
+export function Profile({ period, setPeriod }) {
   return (
     <GridItem
       rowSpan={2}
@@ -34,10 +46,17 @@ export function Profile() {
           </Heading>
         </Box>
       </Box>
-      <Box color="#BDC1FF" fontSize="16px" h="30%" p="25px">
-        <Text>Daily</Text>
-        <Text color="white">Weekly</Text>
-        <Text>Monthly</Text>
+      <Box
+        fontSize="16px"
+        h="30%"
+        p="25px"
+        display="flex"
+        flexDirection="column"
+        justifyContent="space-between"
+      >
+        <ChoosePeriod setPeriod={setPeriod} period={period} name="daily" />
+        <ChoosePeriod setPeriod={setPeriod} period={period} name="weekly" />
+        <ChoosePeriod setPeriod={setPeriod} period={period} name="monthly" />
       </Box>
     </GridItem>
   );
