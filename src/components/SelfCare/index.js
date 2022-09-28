@@ -1,5 +1,14 @@
-import { GridItem } from "@chakra-ui/react";
+import { ActivityBox } from "../ActivityBox";
+import icon from "./icon-self-care.svg";
 
 export function SelfCare() {
-  return <GridItem colSpan={1}>SelfCare</GridItem>;
+  return (
+    <ActivityBox
+      backgroundColor="#F1C65B"
+      icon={icon}
+      activityName="Self Care"
+      hoursNumber="2hrs"
+      hoursNumberLastWeek="Last week - 2 hrs"
+    />
+  );
 }

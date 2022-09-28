@@ -15,7 +15,8 @@ export function ActivityBox({
       bgImage={icon}
       bgRepeat="no-repeat"
       bgPosition="top -10px right 15px"
-      borderRadius="20px"
+      borderTopRadius="20px"
+      borderBottomRadius="50px"
       display="flex"
       flexDirection="column-reverse"
     >
