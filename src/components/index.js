@@ -6,8 +6,11 @@ import { Study } from "./Study";
 import { Exercise } from "./Exercise";
 import { Social } from "./Social";
 import { SelfCare } from "./SelfCare";
+import { useState } from "react";
 
 export function TimeTrackingDashboard() {
+  const [period, setPeriod] = useState("monthly");
+
   return (
     <Grid
       h="500px"
@@ -15,7 +18,7 @@ export function TimeTrackingDashboard() {
       templateColumns="repeat(4, 1fr)"
       gap={7}
     >
-      <Profile />
+      <Profile setPeriod={setPeriod} period={period} />
       <Work />
       <Play />
       <Study />
