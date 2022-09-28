@@ -3,7 +3,9 @@ import { GridItem, Box, Heading, Text, Img } from "@chakra-ui/react";
 function ChoosePeriod({ setPeriod, period, name }) {
   return (
     <Text
+      width="fit-content"
       _hover={{ color: "white" }}
+      cursor="pointer"
       onClick={() => setPeriod(name)}
       color={period === name ? "white" : "#BDC1FF"}
     >

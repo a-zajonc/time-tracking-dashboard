@@ -53,6 +53,8 @@ export function ActivityBox({
         display="flex"
         flexDirection="column"
         justifyContent="space-between"
+        _hover={{ bgColor: "#34397b" }}
+        cursor="pointer"
       >
         <Box
           display="flex"
