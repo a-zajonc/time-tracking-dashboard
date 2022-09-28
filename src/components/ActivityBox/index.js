@@ -1,12 +1,35 @@
 import { GridItem, Box, Heading, Img, Text } from "@chakra-ui/react";
 import ellipsis from "./icon-ellipsis.svg";
+import data from "../data.json";
+
+function getCurrentPeriodValue(period, index) {
+  if (period === "daily") {
+    return data[index].timeframes.daily.current;
+  }
+  if (period === "monthly") {
+    return data[index].timeframes.monthly.current;
+  } else {
+    return data[index].timeframes.weekly.current;
+  }
+}
+
+function getPreviousPeriodValue(period, index) {
+  if (period === "daily") {
+    return data[index].timeframes.daily.previous;
+  }
+  if (period === "monthly") {
+    return data[index].timeframes.monthly.previous;
+  } else {
+    return data[index].timeframes.weekly.previous;
+  }
+}
 
 export function ActivityBox({
   backgroundColor,
   icon,
   activityName,
-  hoursNumber,
-  hoursNumberLastWeek,
+  period,
+  index,
 }) {
   return (
     <GridItem
@@ -43,10 +66,10 @@ export function ActivityBox({
           <Img src={ellipsis} alt="Ellipsis" />
         </Box>
         <Text fontSize="50px" color="white" fontWeight="300" pt="10gpx">
-          {hoursNumber}hrs
+          {getCurrentPeriodValue(period, index)}hrs
         </Text>
         <Text color="#BDC1FF" fontSize="14px">
-          Last week - {hoursNumberLastWeek}hrs
+          Last week - {getPreviousPeriodValue(period, index)}hrs
         </Text>
       </Box>
     </GridItem>
