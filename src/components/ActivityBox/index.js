@@ -14,7 +14,9 @@ export function ActivityBox({
       bgColor={backgroundColor}
       bgImage={icon}
       bgRepeat="no-repeat"
-      bgPosition="top -10px right 15px"
+      bgPosition={
+        activityName === "Exercise" ? "top right 15px" : "top -10px right 15px"
+      }
       borderTopRadius="20px"
       borderBottomRadius="50px"
       display="flex"
