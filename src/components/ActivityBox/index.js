@@ -1,6 +1,6 @@
-import { GridItem, Box, Heading, Img, Text } from "@chakra-ui/react";
-import ellipsis from "./icon-ellipsis.svg";
+import { GridItem, Box, Heading, Text } from "@chakra-ui/react";
 import data from "../data.json";
+import { EllipsisIcon } from "./EllipsisIcon";
 
 function getCurrentPeriodValue(period, index) {
   if (period === "daily") {
@@ -65,7 +65,7 @@ export function ActivityBox({
           <Heading fontSize="18px" fontWeight="500" color="white">
             {activityName}
           </Heading>
-          <Img src={ellipsis} alt="Ellipsis" />
+          <EllipsisIcon />
         </Box>
         <Text fontSize="50px" color="white" fontWeight="300" pt="10gpx">
           {getCurrentPeriodValue(period, index)}hrs
