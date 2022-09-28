@@ -1,5 +1,14 @@
-import { GridItem } from "@chakra-ui/react";
+import { ActivityBox } from "../ActivityBox";
+import icon from "./icon-play.svg";
 
 export function Play() {
-  return <GridItem colSpan={1}>Play</GridItem>;
+  return (
+    <ActivityBox
+      backgroundColor="#56C2E6"
+      icon={icon}
+      activityName="Play"
+      hoursNumber="10hrs"
+      hoursNumberLastWeek="Last week - 8 hrs"
+    />
+  );
 }

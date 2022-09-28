@@ -2,6 +2,7 @@ import { GridItem, Box, Heading, Img, Text } from "@chakra-ui/react";
 import ellipsis from "./icon-ellipsis.svg";
 
 export function ActivityBox({
+  backgroundColor,
   icon,
   activityName,
   hoursNumber,
@@ -10,7 +11,7 @@ export function ActivityBox({
   return (
     <GridItem
       colSpan={1}
-      bgColor="#FF8C66"
+      bgColor={backgroundColor}
       bgImage={icon}
       bgRepeat="no-repeat"
       bgPosition="top -10px right 15px"
