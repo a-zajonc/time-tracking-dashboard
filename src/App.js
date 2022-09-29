@@ -6,7 +6,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box
-        height={{ base: "60vh", lg: "60vh", xl: "100vh" }}
+        height={{ base: "80vh", lg: "60vh", xl: "100vh" }}
         display="flex"
         justifyContent="space-evenly"
         alignItems="center"
