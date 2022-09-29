@@ -18,10 +18,10 @@ export function Profile({ period, setPeriod }) {
   return (
     <GridItem
       rowSpan={{ base: "1", lg: "1", xl: "2" }}
-      colSpan={1}
+      colSpan={{ base: "1", lg: "2", xl: "1" }}
       bgColor="#1C1F4A"
       borderRadius="20px"
-      width={{ base: "350px", xl: "250px" }}
+      width={{ base: "350px", lg: "100%", xl: "250px" }}
     >
       <Box
         bgColor="#5847EB"
@@ -29,8 +29,8 @@ export function Profile({ period, setPeriod }) {
         h="70%"
         p="25px"
         display="flex"
-        flexDirection={{ base: "row", xl: "column" }}
-        alignItems={{ base: "center", xl: "baseline" }}
+        flexDirection={{ base: "row", lg: "row", xl: "column" }}
+        alignItems={{ base: "center", lg: "center", xl: "baseline" }}
         justifyContent="space-evenly"
       >
         <Img

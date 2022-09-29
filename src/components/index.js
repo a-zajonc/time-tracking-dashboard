@@ -14,8 +14,16 @@ export function TimeTrackingDashboard() {
   return (
     <Grid
       h="500px"
-      templateRows={{ base: "repeat(7, 1fr)", xl: "repeat(2, 1fr)" }}
-      templateColumns={{ base: "repeat(1, 1fr)", xl: "repeat(4, 1fr)" }}
+      templateRows={{
+        base: "repeat(7, 1fr)",
+        lg: "repeat(4, 1fr)",
+        xl: "repeat(2, 1fr)",
+      }}
+      templateColumns={{
+        base: "repeat(1, 1fr)",
+        lg: "repeat(2, 1fr)",
+        xl: "repeat(4, 1fr)",
+      }}
       gap={7}
     >
       <Profile setPeriod={setPeriod} period={period} />
