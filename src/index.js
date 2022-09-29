@@ -8,7 +8,7 @@ import { extendTheme } from "@chakra-ui/react";
 const breakpoints = {
   sm: "375px",
   md: "400px",
-  lg: "00px",
+  lg: "600px",
   xl: "900px",
   "2xl": "1440px",
 };

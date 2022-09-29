@@ -46,6 +46,7 @@ export function ActivityBox({
       flexDirection="column-reverse"
       height={{
         base: "170px",
+        lg: "200px",
         xl: "100%",
       }}
     >
@@ -73,19 +74,22 @@ export function ActivityBox({
         </Box>
         <Box
           display="flex"
-          flexDirection={{ base: "row", xl: "column" }}
+          flexDirection={{ base: "row", lg: "column", xl: "column" }}
           justifyContent="space-between"
-          alignItems={{ base: "center", xl: "flex-start" }}
+          alignItems={{ base: "center", lg: "flex-start", xl: "flex-start" }}
         >
           <Text
-            fontSize={{ base: "40px", xl: "50px" }}
+            fontSize={{ base: "40px", lg: "37px", xl: "50px" }}
             color="white"
             fontWeight="300"
             pt="10gpx"
           >
             {getCurrentPeriodValue(period, index)}hrs
           </Text>
-          <Text color="#BDC1FF" fontSize="14px">
+          <Text
+            color="#BDC1FF"
+            fontSize={{ base: "14px", lg: "13px", xl: "14px" }}
+          >
             Last week - {getPreviousPeriodValue(period, index)}hrs
           </Text>
         </Box>
