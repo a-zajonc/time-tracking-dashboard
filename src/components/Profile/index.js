@@ -17,18 +17,21 @@ function ChoosePeriod({ setPeriod, period, name }) {
 export function Profile({ period, setPeriod }) {
   return (
     <GridItem
-      rowSpan={2}
+      rowSpan={{ base: "1", lg: "1", xl: "2" }}
       colSpan={1}
       bgColor="#1C1F4A"
       borderRadius="20px"
-      width="250px"
+      width={{ base: "350px", xl: "250px" }}
     >
       <Box
         bgColor="#5847EB"
         borderRadius="20px"
         h="70%"
         p="25px"
-        display="grid"
+        display="flex"
+        flexDirection={{ base: "row", xl: "column" }}
+        alignItems={{ base: "center", xl: "baseline" }}
+        justifyContent="space-evenly"
       >
         <Img
           src="image-jeremy.png"
@@ -43,7 +46,11 @@ export function Profile({ period, setPeriod }) {
           <Text color="#BDC1FF" fontSize="16px">
             Report for
           </Text>
-          <Heading color="white" fontWeight="300" fontSize="35px">
+          <Heading
+            color="white"
+            fontWeight="300"
+            fontSize={{ base: "26px", xl: "35px" }}
+          >
             Jeremy Robson
           </Heading>
         </Box>
@@ -53,8 +60,12 @@ export function Profile({ period, setPeriod }) {
         h="30%"
         p="25px"
         display="flex"
-        flexDirection="column"
+        flexDirection={{
+          base: "row",
+          xl: "column",
+        }}
         justifyContent="space-between"
+        alignItems={{ base: "center", xl: "flex-start" }}
       >
         <ChoosePeriod setPeriod={setPeriod} period={period} name="daily" />
         <ChoosePeriod setPeriod={setPeriod} period={period} name="weekly" />

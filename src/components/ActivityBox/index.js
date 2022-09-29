@@ -44,6 +44,10 @@ export function ActivityBox({
       borderBottomRadius="50px"
       display="flex"
       flexDirection="column-reverse"
+      height={{
+        base: "170px",
+        xl: "100%",
+      }}
     >
       <Box
         height="80%"
@@ -67,12 +71,24 @@ export function ActivityBox({
           </Heading>
           <EllipsisIcon />
         </Box>
-        <Text fontSize="50px" color="white" fontWeight="300" pt="10gpx">
-          {getCurrentPeriodValue(period, index)}hrs
-        </Text>
-        <Text color="#BDC1FF" fontSize="14px">
-          Last week - {getPreviousPeriodValue(period, index)}hrs
-        </Text>
+        <Box
+          display="flex"
+          flexDirection={{ base: "row", xl: "column" }}
+          justifyContent="space-between"
+          alignItems={{ base: "center", xl: "flex-start" }}
+        >
+          <Text
+            fontSize={{ base: "40px", xl: "50px" }}
+            color="white"
+            fontWeight="300"
+            pt="10gpx"
+          >
+            {getCurrentPeriodValue(period, index)}hrs
+          </Text>
+          <Text color="#BDC1FF" fontSize="14px">
+            Last week - {getPreviousPeriodValue(period, index)}hrs
+          </Text>
+        </Box>
       </Box>
     </GridItem>
   );

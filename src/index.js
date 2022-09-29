@@ -5,7 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { extendTheme } from "@chakra-ui/react";
 
+const breakpoints = {
+  sm: "375px",
+  md: "400px",
+  lg: "00px",
+  xl: "900px",
+  "2xl": "1440px",
+};
+
 export const theme = extendTheme({
+  breakpoints,
   fonts: {
     heading: "Rubik",
     body: "Rubik",
