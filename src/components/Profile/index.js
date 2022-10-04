@@ -1,4 +1,5 @@
 import { GridItem, Box, Heading, Text, Img } from "@chakra-ui/react";
+import photo from "./image-jeremy.png";
 
 function ChoosePeriod({ setPeriod, period, name }) {
   return (
@@ -34,7 +35,7 @@ export function Profile({ period, setPeriod }) {
         justifyContent="space-evenly"
       >
         <Img
-          src="image-jeremy.png"
+          src={photo}
           alt="Profile Photo"
           h="80px"
           borderColor="white"
