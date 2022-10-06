@@ -1,6 +1,6 @@
 import { ActivityBox } from "../ActivityBox";
 import icon from "./icon-self-care.svg";
-import data from "../data.json";
+import data from "../../data.json";
 
 export function SelfCare({ index, period }) {
   return (

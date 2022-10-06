@@ -1,6 +1,6 @@
 import icon from "./icon-work.svg";
 import { ActivityBox } from "../ActivityBox";
-import data from "../data.json";
+import data from "../../data.json";
 
 export function Work({ index, period }) {
   return (
