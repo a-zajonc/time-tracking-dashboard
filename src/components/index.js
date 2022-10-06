@@ -9,7 +9,7 @@ import { SelfCare } from "./SelfCare";
 import { useState } from "react";
 
 export function TimeTrackingDashboard() {
-  const [period, setPeriod] = useState("weekly");
+  const [period, onPeriodChange] = useState("weekly");
 
   return (
     <Grid
@@ -26,7 +26,7 @@ export function TimeTrackingDashboard() {
       }}
       gap={7}
     >
-      <Profile setPeriod={setPeriod} period={period} />
+      <Profile onPeriodChange={onPeriodChange} period={period} />
       <Work period={period} index="0" />
       <Play period={period} index="1" />
       <Study period={period} index="2" />
