@@ -1,13 +1,12 @@
 import { ActivityBox } from "../ActivityBox";
 import icon from "./icon-exercise.svg";
-import data from "../../data.json";
 
-export function Exercise({ index, period }) {
+export function Exercise({ index, period, activityName }) {
   return (
     <ActivityBox
       backgroundColor="#4ACF81"
       icon={icon}
-      activityName={data[index].title}
+      activityName={activityName}
       period={period}
       index={index}
     />

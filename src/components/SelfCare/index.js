@@ -1,13 +1,12 @@
 import { ActivityBox } from "../ActivityBox";
 import icon from "./icon-self-care.svg";
-import data from "../../data.json";
 
-export function SelfCare({ index, period }) {
+export function SelfCare({ index, period, activityName }) {
   return (
     <ActivityBox
       backgroundColor="#F1C65B"
       icon={icon}
-      activityName={data[index].title}
+      activityName={activityName}
       period={period}
       index={index}
     />
