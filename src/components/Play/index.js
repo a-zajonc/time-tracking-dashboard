@@ -1,6 +1,7 @@
 import { ActivityBox } from "../ActivityBox";
 import icon from "./icon-play.svg";
-import data from "../data.json";
+
+import data from "../../data.json";
 
 export function Play({ index, period }) {
   return (

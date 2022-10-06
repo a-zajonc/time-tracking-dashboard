@@ -1,6 +1,6 @@
 import { ActivityBox } from "../ActivityBox";
 import icon from "./icon-social.svg";
-import data from "../data.json";
+import data from "../../data.json";
 
 export function Social({ index, period }) {
   return (

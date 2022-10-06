@@ -1,5 +1,5 @@
 import { GridItem, Box, Heading, Text } from "@chakra-ui/react";
-import data from "../data.json";
+import data from "../../data.json";
 import { EllipsisIcon } from "./EllipsisIcon";
 
 function getCurrentPeriodValue(period, index) {
