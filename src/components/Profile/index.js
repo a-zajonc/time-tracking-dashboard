@@ -1,13 +1,13 @@
 import { GridItem, Box, Heading, Text, Img } from "@chakra-ui/react";
 import photo from "./image-jeremy.png";
 
-function ChoosePeriod({ setPeriod, period, name }) {
+function ChoosePeriod({ onPeriodChange, period, name }) {
   return (
     <Text
       width="fit-content"
       _hover={{ color: "white" }}
       cursor="pointer"
-      onClick={() => setPeriod(name)}
+      onClick={() => onPeriodChange(name)}
       color={period === name ? "white" : "#BDC1FF"}
     >
       {name.charAt(0).toUpperCase() + name.slice(1)}
@@ -15,7 +15,7 @@ function ChoosePeriod({ setPeriod, period, name }) {
   );
 }
 
-export function Profile({ period, setPeriod }) {
+export function Profile({ period, onPeriodChange }) {
   return (
     <GridItem
       rowSpan={{ base: "1", lg: "1", xl: "2" }}
@@ -68,9 +68,21 @@ export function Profile({ period, setPeriod }) {
         justifyContent="space-between"
         alignItems={{ base: "center", xl: "flex-start" }}
       >
-        <ChoosePeriod setPeriod={setPeriod} period={period} name="daily" />
-        <ChoosePeriod setPeriod={setPeriod} period={period} name="weekly" />
-        <ChoosePeriod setPeriod={setPeriod} period={period} name="monthly" />
+        <ChoosePeriod
+          onPeriodChange={onPeriodChange}
+          period={period}
+          name="daily"
+        />
+        <ChoosePeriod
+          onPeriodChange={onPeriodChange}
+          period={period}
+          name="weekly"
+        />
+        <ChoosePeriod
+          onPeriodChange={onPeriodChange}
+          period={period}
+          name="monthly"
+        />
       </Box>
     </GridItem>
   );
